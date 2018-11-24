@@ -1,0 +1,15 @@
+library(tidyverse)
+library(here)
+library(devtools)
+
+set.seed(85)
+year_p <- sample(x = c(2016, 2017, 2018), size = 50, replace = TRUE)
+set.seed(85)
+model_p <- sample(x = c("model1", "model2"), size = 50, replace = TRUE)
+set.seed(85)
+volume_p <- sample.int(n = 100, size = 50, replace = TRUE)
+
+data_test <- dplyr::tibble(year_p, model_p, volume_p)
+# devtools::use_data_raw()
+save(data_test, file = here::here("data/data_test.rda"))
+# or devtools::use_data(data_test, pkg = TESTshinyapp, internal = FALSE)
