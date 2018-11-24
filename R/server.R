@@ -5,6 +5,10 @@ server <- function(input, output, session) {
 
   CurrentYear <- current_year(Sys.Date())
 
+  dat <- list()
+  dat <- input_data(data = data_test)
+  model_ls <- input_model(dat)
+  year_ls <- input_year(dat)
 
 
   # model_reactive <- shiny::reactive({input_model(dat)})
