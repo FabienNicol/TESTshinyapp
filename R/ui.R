@@ -16,7 +16,7 @@ sidebar <- shinydashboard::dashboardSidebar(
                                                                  # choices = model_ls,
                                                                  # error when building the package
                                                                  # ERROR: lazy loading failed for package 'TESTshinyapp'
-                                                                 choices = "temp_before_update",
+                                                                 choices = model_ls,
                                                                  multiple = F, selectize = F)
                                 )
                               ),
